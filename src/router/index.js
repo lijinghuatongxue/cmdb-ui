@@ -10,12 +10,18 @@ export default new VueRouter({
         {
         path: '/home',
         name: 'home',
-        component: Home
-    },
+        component: Home,
+        },
+
         {
             path: '/register',
             name: 'register',
             component: Register
+        },
+        {
+            path: '/nav',
+            name: 'navigator',
+            component: () => import('../components/Navigator.vue')
         },
     ]
 });
