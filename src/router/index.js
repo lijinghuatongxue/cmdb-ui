@@ -1,16 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../components/Login'
-import Register from '../components/Register'
+import Login from '../views/Login'
+import Register from '../views/Register'
+import NavMenu from '../components/Navigator'
+import Progess from '../components/Progess'
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes:[
         {
-        path: '/home',
-        name: 'home',
-        component: Home,
+        path: '/login',
+        name: 'login',
+        component: Login,
         },
         {
             path: '/register',
@@ -19,8 +21,13 @@ export default new VueRouter({
         },
         {
             path: '/nav',
-            name: 'navigator',
-            component: () => import('../components/Navigator.vue')
+            name: 'navmenu',
+            component: NavMenu
+        },
+        {
+            path: '/progess',
+            name: 'Progess',
+            component: Progess
         },
     ]
 });
