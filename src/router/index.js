@@ -26,7 +26,7 @@ export default new VueRouter({
         },
         {
             path: '/progess',
-            name: 'Progess',
+            name: 'progess',
             component: Progess
         },
     ]

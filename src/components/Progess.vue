@@ -4,9 +4,13 @@
 <el-progress :percentage="100" status="warning"></el-progress>
 <el-progress :percentage="50" status="exception"></el-progress>
 
+<template>
+  <h1> 登陆页</h1>
+</template>
+
 <script>
 export default {
-  name: "Progess",
+  name: "progess",
   methods: {
     format(percentage) {
       return percentage === 100 ? '满' : `${percentage}%`;
