@@ -2,7 +2,7 @@
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
 
         <el-form-item label="用户名" prop="username" style="width: 300px">
-            <el-input v-model="ruleForm.username" ></el-input>
+            <el-input v-model="ruleForm.username"></el-input>
         </el-form-item>
 
         <el-form-item label="密码" prop="password" style="width: 300px">
@@ -10,7 +10,7 @@
         </el-form-item>
 
         <el-form-item>
-            <el-button type="primary" @click="submitForm('ruleForm')" >登录</el-button>
+            <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
             <el-button @click="resetForm('ruleForm')">重置</el-button>
         </el-form-item>
     </el-form>
@@ -19,6 +19,7 @@
 
 <script>
     import axios from 'axios'
+
     export default {
         data() {
             return {
@@ -41,9 +42,19 @@
                 // const _this = this
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        axios.post('http://download.lijinghua.club:8068/login', this.ruleForm).then(function (resp) {
+                        axios({
+                            method: 'post',
+                            url: 'http://download.lijinghua.club:8068/login',
+                            params: {
+                                username:'lijinghua',
+                                password: 'lijianghua'
+                            }
 
-                            console.log(resp)
+                    } ).then(function (resp) {
+                            console.log(resp);
+                            if (resp.data.code==200){
+                                console.log("登录成功")
+                            }
                         })
                     } else {
                         console.log('error submit!!');
