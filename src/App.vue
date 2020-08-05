@@ -2,7 +2,7 @@
   <div id="app">
 <!--    <h1> I Love Golang  </h1>-->
     <h1> 首页 233 </h1>
-    <router-link to="/home">登陆  </router-link>
+    <router-link to="/">登陆 </router-link>
     <router-link to="/register">注册 </router-link>
     <router-link to="/nav">导航栏</router-link>
     <router-view></router-view>
