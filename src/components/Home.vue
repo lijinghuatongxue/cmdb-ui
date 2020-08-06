@@ -47,7 +47,7 @@
                             url: 'http://download.lijinghua.club:8068/login',
                             params: {
                                 username:'lijinghua',
-                                password: 'lijianghua'
+                                password: 'lijinghua'
                             }
 
                     } ).then(function (resp) {
